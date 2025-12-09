@@ -1,35 +1,62 @@
-API Cliente – Laravel
+# Sistema CRUD con Laravel + API RESTful
 
-Este proyecto es una API desarrollada con Laravel, diseñada para gestionar clientes mediante operaciones CRUD. Incluye los métodos principales de una API RESTful:
+Este proyecto implementa una API RESTful en Laravel y una aplicación cliente que consume dicha API utilizando los métodos HTTP principales: **GET, POST, PUT, DELETE**.  
+El sistema permite la gestión de estudiantes mediante un CRUD completo.
 
-GET – Obtener datos
+---
 
-POST – Crear datos
+## 🚀 Características del Proyecto
 
-PUT/PATCH – Actualizar datos
+### **API RESTful (Laravel)**
+- Creada en Laravel.
+- Endpoints disponibles:
+  - **GET** → Listar estudiantes  
+  - **POST** → Crear estudiante  
+  - **PUT** → Actualizar estudiante   
+  - **DELETE** → Eliminar estudiante  
+- Respuestas en formato JSON.
+- Validación de datos incluida.
 
-DELETE – Eliminar datos
+### **Aplicación Cliente**
+- Consumida desde una aplicación Laravel (o Blade) usando **fetch()** o **Axios**.
+- Contiene:
+  - Vista para crear estudiantes.
+  - Vista para editar estudiantes.
+  - Listado de estudiantes.
+  - Eliminación directa desde la interfaz.
+  - Notificaciones visuales de éxito/error.
 
-🚀 Requisitos
+---
 
-PHP 8+
+## 🖥️ Funcionamiento de la Aplicación Cliente
 
-Composer
+### **1️⃣ Listado de estudiantes**
+La aplicación solicita datos mediante **GET** a la API y los muestra en una tabla.  
+Incluye opciones de **Editar** y **Eliminar**.
 
-Laravel
+### **2️⃣ Crear nuevo estudiante**
+Formulario que envía los datos mediante **POST** hacia la API.
 
-XAMPP o servidor local similar
+### **3️⃣ Editar estudiante**
+Formulario que carga los datos existentes y envía cambios mediante **PUT**.
 
-MySQL
+### **4️⃣ Eliminar estudiante**
+Botón que ejecuta un **DELETE** y actualiza el listado.
 
-Postman / Insomnia para probar la API
+---
 
-📁 Estructura del proyecto
+## 🔌 Requisitos
 
-app/Http/Controllers → Controladores de la API
+- PHP 8+
+- Composer
+- Laravel 10+
+- MySQL / XAMPP
+- Navegador web
 
-routes/api.php → Rutas principales
+---
 
-database/migrations → Migraciones para tablas
+## ✔️ Conclusión
 
-app/Models → Modelos Eloquent
+Este proyecto demuestra el funcionamiento completo de un **CRUD consumiendo una API REST**, integrando servidor y cliente en Laravel.  
+Se aplican técnicas modernas de comunicación HTTP y vistas dinámicas para gestionar los datos de forma eficiente.
+
